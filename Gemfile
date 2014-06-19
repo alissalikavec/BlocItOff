@@ -35,3 +35,4 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'newrelic_rpm'
 gem 'bootstrap-sass', '~> 3.1.1'
+gem 'faker'

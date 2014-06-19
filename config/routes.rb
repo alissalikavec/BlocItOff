@@ -1,7 +1,7 @@
-Rails.application.routes.draw do
-  get 'welcome/index'
+BlocItOff::Application.routes.draw do
+  resources :lists
 
-  get 'welcome/about'
+  get 'about' => 'welcome#about'
 
 root to: 'welcome#index'
 end
