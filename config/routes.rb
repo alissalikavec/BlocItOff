@@ -1,6 +1,6 @@
 BlocItOff::Application.routes.draw do
   devise_for :users
-  resources :todo
+  resources :todos
 
   get 'about' => 'welcome#about'
 
