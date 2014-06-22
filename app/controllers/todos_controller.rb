@@ -12,7 +12,7 @@ def show
   end
 
   def create
-  	@todo = Todo.new(params.require(:todo).permit(:description))
+  	@todo = Todo.new(todo_params)
   	if @todo.save
   		flash[:notice] = "Todo was saved."
   		redirect_to todos_path
@@ -20,5 +20,10 @@ def show
   		flash[:error] = "There was an error saving the todo. Please try again."
   		render :new
   	end
+  end
+
+  private
+  def todo_params
+    params.require(:todo).permit(:description, :completed)
   end
 end

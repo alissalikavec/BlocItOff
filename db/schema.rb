@@ -13,16 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140622135105) do
 
-  create_table "lists", force: true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
-  end
-
-  add_index "lists", ["user_id"], name: "index_lists_on_user_id"
-
   create_table "todos", force: true do |t|
     t.string   "description"
     t.boolean  "completed"
@@ -52,9 +42,9 @@ ActiveRecord::Schema.define(version: 20140622135105) do
     t.string   "unconfirmed_email"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "role"
   end
 
+  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
