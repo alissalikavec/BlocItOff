@@ -33,8 +33,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'newrelic_rpm'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'faker'
 gem 'devise'
 gem 'figaro'
+gem 'whenever', :require => false
