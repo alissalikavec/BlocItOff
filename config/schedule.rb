@@ -19,5 +19,5 @@
 
 # Learn more: http://github.com/javan/whenever
 every :hour do
-	rake: "my:rake:delete_items"
+	rake: "todo:delete_items"
 end
