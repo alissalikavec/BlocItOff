@@ -3,6 +3,7 @@
 	<h1 class="media-heading">My To-Do List</h1>
 	
 	<%= link_to "+", new_todo_path, class: 'addNew' %>
+	<%= render partial: 'form', locals: { todo: @todo, user: @user } %>
 		<table class="table">
 			<thead>
 				<th>
@@ -15,26 +16,8 @@
 					Complete
 				</th>
 			</thead>
-			<tbody>
-				<% @todos.each do |todo| %>
-				<tr>
-					<td>
-						<%= todo.description %>
-					</td>
-					<td>
-						<%= "#{time_ago_in_words(todo.created_at)} ago" %>
-					</td>
-					<td>
-						<!--<%= todo.completed %>-->
-						<% if todo.completed %>
-						Completed
-						<% else %>
-						Click to complete
-						<%end%>
-						Delete
-					</td>
-				</tr>
-				<% end %>
+			<tbody class="js-todos">
+				<%= render partial: 'todos/todo', collection: @todos %>
 			</tbody>
 		</table>
 	</div>

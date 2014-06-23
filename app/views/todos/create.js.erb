@@ -1,0 +1,5 @@
+<% if @todo.valid? %>
+$('.js-todos').prepend("<%= escape_javascript(render(@todo)) %>")
+<% else %>
+$('.new_todos').html("<%= escape_javascript(render partial: 'todos/form', locals: { todo: @todo }) %>");
+<% end %>

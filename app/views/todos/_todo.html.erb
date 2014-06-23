@@ -1,0 +1,15 @@
+<%= content_tag :tr, class: 'media', id: "todo-#{todo.id}" do %>
+	<td>
+		<%= todo.description %>
+	</td>
+	<td>
+		<%= "#{time_ago_in_words(todo.created_at)} ago" %>
+	</td>
+	<td>
+		<% if todo.completed %>
+			Completed
+		<% else %>
+			Click to complete
+		<%end%>
+	</td>
+<% end %>
