@@ -1,6 +1,6 @@
 require 'faker'
 
-10.times do
+100.times do
 	Todo.create(
 		description: Faker::Lorem.sentence,
 		completed: false
