@@ -1,6 +1,7 @@
 class TodosController < ApplicationController
   def index
   	@todos = Todo.all
+    authorize @todos
   end
 
 def show
@@ -9,10 +10,12 @@ def show
 
   def new
   	@todo = Todo.new
+    authorize @todo
   end
 
   def create
   	@todo = Todo.new(todo_params)
+    authorize @todo
   	if @todo.save
   		flash[:notice] = "Todo was saved."
   		redirect_to todos_path

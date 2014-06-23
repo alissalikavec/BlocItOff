@@ -38,3 +38,4 @@ gem 'faker'
 gem 'devise'
 gem 'figaro'
 gem 'whenever', :require => false
+gem 'pundit'
