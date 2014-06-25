@@ -29,7 +29,8 @@ def show
   end
 
   def destroy
-    @todo = Todo.find(params(:id))
+    @todo = Todo.find(params[:id])
+    @todo.destroy
     authorize @todo
 
     if @todo.destroy
@@ -38,9 +39,9 @@ def show
       flash[:error] = "Todo couldn't be deleted. Try again."
     end
 
-    # respond_with(@todo) do |f|
-     # f.html { redirect_to todos_path }
-    #end
+    respond_with(@todo) do |f|
+     f.html { redirect_to todos_path }
+    end
   end
 
   private

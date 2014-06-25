@@ -1,8 +1,6 @@
 <div class="media">
 	<div class-"media-body">
 	<h1 class="media-heading">My To-Do List</h1>
-	
-	<%= link_to "+", new_todo_path, class: 'addNew' %>
 	<%= render partial: 'form', locals: { todo: @todo, user: @user } %>
 		<table class="table">
 			<thead>
