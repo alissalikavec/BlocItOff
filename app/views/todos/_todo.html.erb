@@ -5,12 +5,11 @@
 	<td>
 		<%= "#{time_ago_in_words(todo.created_at)} ago" %>
 	</td>
-	<td>
+	<td class="completeCol">
 		<% if todo.completed %>
 			Completed
 		<% else %>
-			<%= link_to "", todo, method: :delete, class: 'btn-default
-glyphicon glyphicon-ok' %>
+			<%= link_to "", todo, method: :delete, class: 'glyphicon glyphicon-ok' %>
 		<%end%>
 	</td>
 <% end %>
