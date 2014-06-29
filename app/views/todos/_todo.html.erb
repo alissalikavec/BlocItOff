@@ -9,8 +9,8 @@
 		<% if todo.completed %>
 			Completed
 		<% else %>
-			Click to complete
+			<%= link_to "", todo, method: :delete, class: 'btn-default
+glyphicon glyphicon-ok' %>
 		<%end%>
-		<%= link_to "Delete", todo, method: :delete, class: 'btn-sm btn-danger' %>
 	</td>
 <% end %>

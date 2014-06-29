@@ -1,7 +1,9 @@
 <div class="media">
 	<div class-"media-body">
 	<h1 class="media-heading">My To-Do List</h1>
-	<%= render partial: 'form', locals: { todo: @todo, user: @user } %>
+	<p>
+		Add and complete to-dos. To-dos will be deleted automatically after seven days.
+	</p>
 		<table class="table">
 			<thead>
 				<th>
@@ -11,12 +13,17 @@
 					Created
 				</th>
 				<th>
-					Complete
+					Check to Complete
+				</th>
+				<th>
+				</th>
+				<th>
 				</th>
 			</thead>
 			<tbody class="js-todos">
 				<%= render partial: 'todos/todo', collection: @todos %>
 			</tbody>
 		</table>
+		<%= render partial: 'form', locals: { todo: @todo, user: @user } %>
 	</div>
 </div>

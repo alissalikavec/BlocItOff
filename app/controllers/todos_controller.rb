@@ -21,7 +21,7 @@ def show
     @new_todo = Todo.new
     authorize @todo
   	if @todo.save
-  		flash[:notice] = "Todo was saved."
+  		flash[:notice] = "Todo was created!"
   	else
   		flash[:error] = "There was an error saving the todo. Please try again."
   		render :new
@@ -34,9 +34,9 @@ def show
     authorize @todo
 
     if @todo.destroy
-      flash[:notice] = "Todo was removed."
+      flash[:notice] = "Todo was completed!"
     else
-      flash[:error] = "Todo couldn't be deleted. Try again."
+      flash[:error] = "Todo couldn't be completed. Try again."
     end
 
     respond_with(@todo) do |f|

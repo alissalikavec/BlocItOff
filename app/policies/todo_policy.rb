@@ -6,6 +6,6 @@ class TodoPolicy < ApplicationPolicy
   end
 
 	def index?
-		true
+		user.present?
 	end
 end

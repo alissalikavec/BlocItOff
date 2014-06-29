@@ -6,7 +6,15 @@
 
 .nav {
   margin-top: 5px;
+  background: #11AA67;
+  padding-right: 15px;
 }
+
+.nav a {
+	color: #fff;
+
+}
+
 
 .media-heading {
 	width: 330px;
@@ -19,3 +27,19 @@
 		padding-left: 10px;
 		font-weight: bold;
 	}
+.row {
+	margin: 15px;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.nav-tabs > li > a:hover {
+  border-color: transparent
+}
+
+#addTodoText .form-control {
+	width: 40%;
+	display: inline;
+
+}
