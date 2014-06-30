@@ -2,24 +2,34 @@
   <div class="jumbotron">
     <h1>Blocitoff!</h1>
     <p>Blocitoff is here to help!</p>
+    <% if !current_user %>
     <p>
         <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or 
         <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> today!
     </p>
+    <% end %>
   </div>
 
   <div class="row">
     <div class="col-md-4">
-      <h2>Solves world hunger</h2>
-      <p>Blocitoff will deliver food and water to those in need, all over the world.</p>
+      <span class="glyphicon glyphicon-list-alt"></span>
+      <h2>Helps you remember</h2>
+      <p>Add to-dos from wherever you are.</p>
     </div>
     <div class="col-md-4">
-      <h2>Eliminates poverty</h2>
-      <p>Blocitoffwill deliver money and education to those in need, all over the world.</p>
+      <span class="glyphicon glyphicon-road"></span>
+      <h2>Keeps you focused</h2>
+      <p>To-dos are automatically deleted after seven days.</p>
     </div>
     <div class="col-md-4">
-      <h2>Makes you better looking</h2>
-      <p>Blocitoff will make you better looking: it's scientifically proven to make men look like Ryan Gosling and women look like Shakira.</p>
+      <span class="glyphicon glyphicon-lock"></span>
+      <h2>Private</h2>
+      <p>Sign in to create your own to-do list.</p>
     </div>
   </div>
+  <div class="credits">
+    brought to you by <a href="http://github.com/alissalikavec">Alissa Likavec</a>
+  </div>
+
+
 </div>
