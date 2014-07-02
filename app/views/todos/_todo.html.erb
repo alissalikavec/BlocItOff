@@ -3,7 +3,7 @@
 		<%= todo.description %>
 	</td>
 	<td>
-		<%= "#{time_ago_in_words(todo.created_at)} ago" %>
+		<%= "#{(((todo.created_at + 7.days) - todo.created_at) / 86400).floor} days" %>
 	</td>
 	<td class="completeCol">
 		<% if todo.completed %>
